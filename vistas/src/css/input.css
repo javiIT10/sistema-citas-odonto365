@@ -1,0 +1,265 @@
+/* FUENTES */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  /* ========== Fonts ========== */
+  --font-heading: "Montserrat", sans-serif;
+  --font-body: "Lato", sans-serif;
+
+  /* Colores base */
+  --color-primario: hsl(210, 100%, 40%);
+  --color-secundario: hsl(210, 80%, 75%);
+
+  /* Tipografía */
+  --color-titulos: hsl(210, 100%, 25%);
+  --color-textos: hsl(210, 30%, 20%);
+  --color-textos-secundarios: hsl(210, 20%, 60%);
+
+  /* Botones */
+  --color-boton-primario-bg: var(--color-primario);
+  --color-boton-primario-texto: hsl(0, 0%, 100%);
+  --color-boton-primario-hover-bg: hsl(210, 100%, 35%);
+
+  --color-boton-secundario-bg: hsl(210, 80%, 85%);
+  --color-boton-secundario-texto: var(--color-titulos);
+  --color-boton-secundario-hover-bg: hsl(210, 80%, 78%);
+
+  /* --color-boton-suave-bg: hsl(210, 100%, 97%); */
+  --color-boton-suave-hover-bg: hsl(210, 100%, 94%);
+  --color-boton-suave-texto: hsl(210, 30%, 40%);
+
+  /*   --color-boton-link-hover-bg: hsl(210, 60%, 95%);
+  --color-boton-link-hover-texto: hsl(210, 100%, 25%); */
+
+  --color-boton-deshabilitado-bg: hsl(0, 0%, 92%);
+  --color-boton-deshabilitado-texto: hsl(0, 0%, 60%);
+
+  --color-boton-cerrar-bg: hsl(0, 100%, 90%);
+  --color-boton-cerrar-texto: hsl(0, 80%, 30%);
+  --color-boton-cerrar-hover-bg: hsl(0, 100%, 80%);
+
+  /* Botón/enlace transparente */
+  --color-enlace-transparente: hsla(210, 30%, 40%, 0.1);
+  --color-enlace-hover-fondo: hsla(210, 100%, 90%, 0.4);
+  --color-enlace-hover-texto: hsl(210, 100%, 30%);
+
+  /* Bordes */
+  --color-borde: hsl(210, 20%, 88%);
+
+  /* Fondos */
+  --color-fondo-principal: hsl(210, 100%, 98%);
+  --color-fondo-alternativo: #f8fafc /* hsl(210, 20%, 95%) */;
+  --color-fondo-terciario: hsl(210, 100%, 90%);
+
+  /* Tarjetas de estatus */
+  --color-estatus-agendada-bg: hsl(45, 100%, 85%);
+  --color-estatus-agendada-texto: hsl(45, 100%, 25%);
+
+  --color-estatus-pendiente-bg: hsl(0, 100%, 90%);
+  --color-estatus-pendiente-texto: hsl(0, 100%, 35%);
+
+  --color-estatus-proxima-bg: hsl(210, 100%, 90%);
+  --color-estatus-proxima-texto: hsl(210, 100%, 30%);
+
+  --color-estatus-completada-bg: hsl(140, 70%, 85%);
+  --color-estatus-completada-texto: hsl(140, 70%, 25%);
+
+  --color-estatus-neutral-bg: hsl(0, 0%, 95%);
+  --color-estatus-neutral-texto: hsl(0, 0%, 40%);
+}
+
+/* <!--==================== COMPONENTS ====================--> */
+@layer base {
+  /* titulos */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading text-titulos;
+  }
+
+  h1 {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold leading-tight;
+  }
+  h2 {
+    @apply text-2xl md:text-3xl lg:text-4xl font-bold leading-snug;
+  }
+  h3 {
+    @apply text-xl md:text-2xl lg:text-3xl font-semibold;
+  }
+  h4 {
+    @apply text-lg md:text-xl lg:text-2xl font-medium;
+  }
+  h5 {
+    @apply text-base md:text-lg lg:text-xl font-medium;
+  }
+  h6 {
+    @apply text-sm md:text-base lg:text-lg font-medium;
+  }
+
+  /*paragraphs */
+  p {
+    @apply text-base md:text-lg lg:text-lg leading-relaxed text-textos font-body;
+  }
+
+  small {
+    @apply text-sm md:text-base text-textos-secundarios font-body;
+  }
+}
+
+@layer components {
+  /* Menu icon */
+  .menu-icon {
+    width: 24px;
+    height: 24px;
+  }
+  .menu-icon .line {
+    stroke: currentColor;
+    stroke-width: 2;
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+  .menu-open .line1 {
+    transform: rotate(45deg) translate(0, 6px);
+  }
+  .menu-open .line2 {
+    opacity: 0;
+  }
+  .menu-open .line3 {
+    transform: rotate(-45deg) translate(0, -6px);
+  }
+
+  #menu {
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-100%);
+    opacity: 0;
+    display: block !important;
+    pointer-events: none;
+  }
+
+  #menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Buttons */
+  .btn {
+    @apply w-full px-4 py-2 text-sm font-semibold rounded-lg transition-colors duration-300 md:w-auto md:px-6 md:py-3 md:text-base lg:px-8 lg:py-4 lg:text-lg font-body;
+    &.primario {
+      @apply text-boton-primario-texto bg-boton-primario-bg hover:bg-boton-primario-hover-bg;
+      &.movil {
+        @apply flex-1 text-center;
+      }
+    }
+    &.secundario {
+      @apply text-boton-secundario-texto bg-boton-secundario-bg hover:bg-boton-secundario-hover-bg;
+      &.movil {
+        @apply flex-1 text-center border border-borde;
+      }
+    }
+    &.suave {
+      @apply text-boton-suave-texto bg-transparent hover:bg-boton-suave-hover-bg;
+      &.movil {
+        @apply flex-1 text-center border border-borde;
+      }
+    }
+    &.deshabilitado {
+      @apply text-boton-deshabilitado-texto bg-boton-deshabilitado-bg cursor-not-allowed;
+    }
+    &.cerrar {
+      @apply text-boton-cerrar-texto bg-boton-cerrar-bg hover:bg-boton-cerrar-hover-bg;
+    }
+  }
+
+  /* encabezado */
+  .encabezado {
+    @apply px-3 py-1 md:px-4 md:py-2 lg:px-5 lg:py-2 rounded-full;
+  }
+
+  /* Datetime picker */
+  /* Custom styles for the new calendar/time picker */
+  .calendar-grid {
+    @apply grid grid-cols-7 gap-2 p-1;
+  }
+  .calendar-day {
+    @apply w-full px-4 py-2 text-sm font-semibold rounded-lg transition-colors duration-300 md:w-auto md:px-6 md:py-3 md:text-base lg:px-8 lg:py-4 lg:text-lg font-body text-boton-suave-texto bg-transparent flex items-center justify-center text-center border border-borde cursor-pointer;
+  }
+  .calendar-day.selectable:hover {
+    @apply bg-boton-suave-hover-bg;
+  }
+  .calendar-day.selected {
+    @apply text-boton-primario-texto bg-boton-primario-bg hover:bg-boton-primario-hover-bg;
+  }
+  .calendar-day.disabled {
+    @apply text-boton-deshabilitado-texto bg-boton-deshabilitado-bg cursor-not-allowed;
+  }
+
+  .time-slot-button {
+    @apply w-full px-4 py-2 text-sm font-semibold rounded-lg transition-colors duration-300 md:w-auto md:px-6 md:py-3 md:text-base lg:px-8 lg:py-4 lg:text-lg font-body text-boton-suave-texto bg-transparent flex items-center justify-center text-center border border-borde cursor-pointer;
+  }
+
+  .time-slot-button.selected {
+    @apply text-boton-primario-texto bg-boton-primario-bg hover:bg-boton-primario-hover-bg;
+  }
+  .time-slot-button.disabled {
+    @apply text-boton-deshabilitado-texto bg-boton-deshabilitado-bg cursor-not-allowed;
+  }
+
+  /* Animaciones suaves para el modal */
+  .modal-enter {
+    animation: modalEnter 0.2s ease-out;
+  }
+
+  .modal-exit {
+    animation: modalExit 0.2s ease-in;
+  }
+
+  @keyframes modalEnter {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+  @keyframes modalExit {
+    from {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    to {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.95);
+    }
+  }
+
+  .modal {
+    display: none;
+  }
+  .modal.active {
+    display: flex;
+  }
+  .carousel-container {
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .carousel-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  #loader {
+    transition: opacity 0.3s ease;
+  }
+  #loader.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}

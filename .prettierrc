@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/prettierrc",
+  "printWidth": 100,
+  "tabWidth": 2,
+  "singleQuote": false,
+  "trailingComma": "es5",
+  "semi": true,
+  "arrowParens": "always",
+  "plugins": ["@prettier/plugin-php", "prettier-plugin-tailwindcss"],
+  "overrides": [
+    { "files": "*.php", "options": { "parser": "php" } },
+    { "files": ["*.js", "*.mjs", "*.cjs"], "options": { "parser": "babel" } }
+  ]
+}

@@ -1,0 +1,44 @@
+# =========================
+# SISTEMA-CITAS-ODONTO365
+# =========================
+
+# SO
+.DS_Store
+Thumbs.db
+*.lnk
+*~
+
+# PHP / XAMPP
+.env
+.env.local
+.env.*.local
+*.ini
+*.bak
+*.log
+*.cache
+*.tmp
+*.session
+
+# Archivos de conexion
+modelos/conexion.php
+
+# Composer (si lo usas)
+vendor/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-lock.yaml
+# Si NO quieres versionar lockfile:
+package-lock.json
+
+# IDE
+.vscode/
+.idea/
+
+# Builds / coverage
+dist/
+build/
+coverage/
+

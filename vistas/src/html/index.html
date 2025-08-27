@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title -->
+    <title>Odonto365</title>
+
+    <!-- Favicon -->
+
+    <!--==================== CSS ====================-->
+
+    <!-- lucide -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <!-- CSS Perzonalizado -->
+    <link rel="stylesheet" href="src/css/output.css" />
+  </head>
+  <body class="font-body text-textos">
+    <!--==================== HEADER ====================-->
+    <header class="relative z-50 bg-fondo-alternativo">
+      <div class="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="flex justify-between items-center h-16 md:h-20">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-scan-heart-icon lucide-scan-heart text-primario w-8 lg:w-12 h-8 lg:h-12"
+              >
+                <path
+                  d="M11.246 16.657a1 1 0 0 0 1.508 0l3.57-4.101A2.75 2.75 0 1 0 12 9.168a2.75 2.75 0 1 0-4.324 3.388z"
+                />
+                <path d="M17 3h2a2 2 0 0 1 2 2v2" />
+                <path d="M21 17v2a2 2 0 0 1-2 2h-2" />
+                <path d="M3 7V5a2 2 0 0 1 2-2h2" />
+                <path d="M7 21H5a2 2 0 0 1-2-2v-2" />
+              </svg>
+            </div>
+            <h2 class="ml-1">Odonto365</h2>
+          </div>
+
+          <!-- Menú para pantallas grandes -->
+          <nav class="hidden lg:flex space-x-4">
+            <a
+              href="#"
+              class="btn suave bg-transparent hover:bg-boton-suave-hover-bg"
+              >Instalaciones</a
+            >
+            <a
+              href="#"
+              class="btn suave bg-transparent hover:bg-boton-suave-hover-bg"
+              >Especialidades</a
+            >
+            <a
+              href="#"
+              class="btn suave bg-transparent hover:bg-boton-suave-hover-bg"
+              >Blog</a
+            >
+            <a
+              href="#"
+              class="btn suave bg-transparent hover:bg-boton-suave-hover-bg"
+              >Contacto</a
+            >
+          </nav>
+
+          <!-- Botones de inicio de sesión y registro para pantallas grandes -->
+          <div class="hidden lg:flex space-x-2 text-base lg:text-lg">
+            <a
+              href="perfil.html"
+              class="flex justify-center items-center focus:outline-none gap-2 btn suave border border-borde"
+            >
+              Acceder
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-log-in-icon lucide-log-in w-5 h-5"
+              >
+                <path d="m10 17 5-5-5-5" />
+                <path d="M15 12H3" />
+                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- Botón de menú para pantallas pequeñas -->
+          <button
+            id="menuToggle"
+            class="lg:hidden text-titulos focus:outline-none"
+            aria-label="Abrir menú"
+          >
+            <svg
+              class="menu-icon w-8 h-8"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line x1="3" y1="6" x2="21" y2="6" class="line line1" />
+              <line x1="3" y1="12" x2="21" y2="12" class="line line2" />
+              <line x1="3" y1="18" x2="21" y2="18" class="line line3" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Menú Mobile -->
+    <div class="lg:hidden">
+      <div
+        id="menu"
+        class="fixed top-16 left-0 right-0 z-40 px-4 sm:px-6 lg:px-8 hidden"
+      >
+        <div class="p-5 bg-fondo-principal shadow-sm rounded-lg">
+          <nav class="space-y-4 mt-2">
+            <a
+              href="#"
+              class="block btn suave bg-transparent hover:bg-boton-suave-hover-bg px-0"
+              >Instalaciones</a
+            >
+            <a
+              href="#"
+              class="block btn suave bg-transparent hover:bg-boton-suave-hover-bg px-0"
+              >Especialidades</a
+            >
+            <a
+              href="#"
+              class="block btn suave bg-transparent hover:bg-boton-suave-hover-bg px-0"
+              >Blog</a
+            >
+            <a
+              href="#"
+              class="block btn suave bg-transparent hover:bg-boton-suave-hover-bg px-0"
+              >Contacto</a
+            >
+          </nav>
+          <div class="mt-6 flex w-full gap-2 font-heading">
+            <a
+              href="perfil.html"
+              class="flex justify-center items-center focus:outline-none gap-2 btn primario movil"
+            >
+              Acceder
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-log-in-icon lucide-log-in w-5 h-5"
+              >
+                <path d="m10 17 5-5-5-5" />
+                <path d="M15 12H3" />
+                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--==================== HERO ====================-->
+    <section class="bg-fondo-alternativo pt-16">
+      <div
+        class="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative grid gap-16 lg:gap-0 lg:grid-cols-2 lg:items-center"
+      >
+        <div
+          class="flex flex-col items-center text-center lg:items-start lg:text-left px-4"
+        >
+          <small
+            class="encabezado inline-block mb-4 text-estatus-proxima-texto bg-estatus-proxima-bg font-medium"
+          >
+            Cuidado Dental Avanzado
+          </small>
+          <h1 class="mb-6 leading-none tracking-tight md:max-w-[600px]">
+            Bienvenido a la excelencia dental en
+            <span class="text-primario">Odonto365</span>
+          </h1>
+          <p class="mb-8 max-w-lg">
+            Experimente el futuro de la odontología: rápida, segura y adaptada
+            para la comodidad y confianza de la próxima generación.
+          </p>
+          <div
+            class="mb-8 w-full lg:max-w-lg flex justify-between gap-4 lg:justify-start md:max-w-[600px]"
+          >
+            <a
+              href="#"
+              class="w-full flex justify-center items-center focus:outline-none gap-2 btn suave border border-borde"
+            >
+              Conócenos
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-external-link-icon lucide-external-link w-5 h-5"
+              >
+                <path d="M15 3h6v6" />
+                <path d="M10 14 21 3" />
+                <path
+                  d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                />
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="w-full btn primario flex justify-center items-center focus:outline-none btn primario"
+            >
+              Contáctanos
+            </a>
+          </div>
+        </div>
+
+        <div class="relative mx-auto">
+          <img
+            src="src/img/hero.png"
+            alt="Persona mostrando datos de Odonto365"
+            class="mx-auto h-auto w-full max-w-md object-contain lg:max-w-lg"
+          />
+          <div class="absolute inset-0">
+            <div
+              id="userCard"
+              class="absolute right-4 -top-4 flex items-center space-x-3 rounded-xl bg-fondo-principal p-3 shadow-sm transition-all lg:-right-6 xl:-right-12 lg:top-0"
+            >
+              <div class="flex -space-x-2">
+                <img
+                  src="src/img/user1.jpeg"
+                  alt="User 1"
+                  class="h-8 w-8 rounded-full border-2 border-borde"
+                />
+                <img
+                  src="src/img/user2.jpeg"
+                  alt="User 2"
+                  class="h-8 w-8 rounded-full border-2 border-borde"
+                />
+                <img
+                  src="src/img/user3.jpeg"
+                  alt="User 3"
+                  class="h-8 w-8 rounded-full border-2 border-borde"
+                />
+              </div>
+              <div class="flex flex-col">
+                <h4>120K+</h4>
+                <p>Usuarios satisfechos</p>
+              </div>
+            </div>
+            <div
+              id="paymentCard"
+              class="absolute -bottom-4 left-4 rounded-xl bg-fondo-principal p-6 shadow-sm transition-all md:-bottom-16 md:left-0 md:p-4"
+            >
+              <div class="space-y-2">
+                <h4 class="mb-2">Tratamientos realizados</h4>
+                <h4>+35,890</h4>
+                <div class="flex items-center justify-between">
+                  <p>1 Ene, 2024</p>
+                  <p class="flex items-center space-x-1 text-green-600">
+                    <span>satisfaccion</span>
+                    <span>98%</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--==================== INSTALACIONES Y MAS ====================-->
+    <section
+      class="w-full py-12 md:py-24 lg:pb-32 lg:pt-46 bg-gradient-to-b from-fondo-principal to-fondo-alternativo"
+    >
+      <div class="container mx-auto px-4 md:px-6">
+        <!-- Header -->
+        <div
+          class="flex flex-col items-center justify-center space-y-4 text-center mb-12"
+        >
+          <div class="space-y-2">
+            <small
+              class="encabezado text-estatus-proxima-texto bg-estatus-proxima-bg inline-block mb-4"
+            >
+              Nuestras Instalaciones
+            </small>
+            <h2 class="tracking-tighter">Consultorio Médico Moderno</h2>
+            <p class="max-w-[700px]">
+              Contamos con instalaciones de última generación diseñadas para
+              brindar la mejor atención médica en un ambiente cómodo y
+              profesional.
+            </p>
+          </div>
+        </div>
+
+        <!-- Main Content -->
+        <div
+          class="mx-auto grid max-w-6xl items-center gap-8 lg:grid-cols-2 lg:gap-12"
+        >
+          <!-- Information Column -->
+          <div class="flex flex-col justify-center space-y-8">
+            <div class="space-y-4">
+              <h3>Equipamiento de Vanguardia</h3>
+              <p>
+                Nuestro consultorio está equipado con la más moderna tecnología
+                médica para garantizar diagnósticos precisos y tratamientos
+                efectivos.
+              </p>
+            </div>
+
+            <!-- Features List -->
+            <ul class="grid gap-4">
+              <li class="flex items-start gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-circle-check-big-icon lucide-circle-check-big text-botones-destacados w-8 h-8"
+                >
+                  <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                  <path d="m9 11 3 3L22 4" />
+                </svg>
+                <div>
+                  <h4>Salas de Consulta Privadas</h4>
+                  <p>Espacios cómodos y privados para cada consulta</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-circle-check-big-icon lucide-circle-check-big text-botones-destacados w-8 h-8"
+                >
+                  <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                  <path d="m9 11 3 3L22 4" />
+                </svg>
+                <div>
+                  <h4>Equipos de Diagnóstico</h4>
+                  <p>Tecnología avanzada para estudios precisos</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-circle-check-big-icon lucide-circle-check-big text-botones-destacados w-8 h-8"
+                >
+                  <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                  <path d="m9 11 3 3L22 4" />
+                </svg>
+                <div>
+                  <h4>Sala de Espera Confortable</h4>
+                  <p>Ambiente relajante y acogedor para nuestros pacientes</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-circle-check-big-icon lucide-circle-check-big text-botones-destacados w-8 h-8"
+                >
+                  <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                  <path d="m9 11 3 3L22 4" />
+                </svg>
+                <div>
+                  <h4>Protocolos de Higiene</h4>
+                  <p>Estrictas medidas de limpieza y desinfección</p>
+                </div>
+              </li>
+            </ul>
+
+            <!-- Contact Info -->
+            <div class="bg-primario/5 rounded-lg p-6 space-y-3">
+              <h3 class="mb-3">Información de Contacto</h3>
+              <div class="flex items-center gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-map-pin-icon lucide-map-pin w-4 h-4 text-primario"
+                >
+                  <path
+                    d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
+                  />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                <p>Av. Principal 123, Centro Médico, Ciudad</p>
+              </div>
+              <div
+                class="flex items-center gap-3 text-sm md:text-base text-text"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-clock8-icon lucide-clock-8 w-4 h-4 text-primario"
+                >
+                  <path d="M12 6v6l-4 2" />
+                  <circle cx="12" cy="12" r="10" />
+                </svg>
+                <p>Lun - Vie: 8:00 AM - 6:00 PM | Sáb: 9:00 AM - 2:00 PM</p>
+              </div>
+              <div
+                class="flex items-center gap-3 text-sm md:text-base text-text"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-phone-icon lucide-phone w-4 h-4 text-primario"
+                >
+                  <path
+                    d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"
+                  />
+                </svg>
+                <p>(555) 123-4567</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Images Column -->
+          <div class="grid gap-3 py-7">
+            <!-- Main Image -->
+            <div class="relative">
+              <img
+                src="src/img/instalaciones.png"
+                alt="Sala de espera del consultorio médico"
+                class="w-full rounded-xl object-cover shadow-lg"
+              />
+              <div
+                class="absolute bottom-2 left-2 bg-fondo-principal backdrop-blur-sm rounded-lg px-3 py-2"
+              >
+                <p>Sala de Espera</p>
+              </div>
+            </div>
+
+            <!-- Secondary Images Grid -->
+            <div class="grid grid-cols-2 gap-3">
+              <div class="relative">
+                <img
+                  src="src/img/consultorio.png"
+                  width="190"
+                  height="160"
+                  alt="Sala de consulta médica"
+                  class="w-full rounded-lg object-cover shadow-sm"
+                />
+                <div
+                  class="absolute bottom-2 left-2 bg-fondo-principal backdrop-blur-sm rounded-lg px-3 py-2"
+                >
+                  <p>Consultorio</p>
+                </div>
+              </div>
+              <div class="relative">
+                <img
+                  src="src/img/equipos.png"
+                  width="190"
+                  height="160"
+                  alt="Sala de equipos médicos"
+                  class="w-full rounded-lg object-cover shadow-sm"
+                />
+                <div
+                  class="absolute bottom-2 left-2 bg-fondo-principal backdrop-blur-sm rounded-lg px-3 py-2"
+                >
+                  <p>Equipos</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <!-- tarjetas Grid -->
+        <div
+          class="grid gap-6 mb-12 md:grid-cols-[repeat(2,1fr)] md:grid-rows-2 md:w-full md:max-w-4xl md:mx-auto"
+        >
+          <!-- tarjeta 1 -->
+          <div class="bg-fondo-principal shadow-lg rounded-lg relative">
+            <div class="absolute inset-0 grid grid-cols-3 grid-rows-3">
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-secundario"></div>
+              </div>
+              <div class="flex items-center justify-center"></div>
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-secundario"></div>
+              </div>
+              <div class="flex items-center justify-center"></div>
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-secundario"></div>
+              </div>
+              <div class="flex items-center justify-center"></div>
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-secundario"></div>
+              </div>
+              <div class="flex items-center justify-center"></div>
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-secundario"></div>
+              </div>
+            </div>
+            <div class="p-6 relative">
+              <div class="mb-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-shield-user-icon lucide-shield-user w-8 h-8 md:w-10 md:h-10 text-primario"
+                >
+                  <path
+                    d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                  />
+                  <path d="M6.376 18.91a6 6 0 0 1 11.249.003" />
+                  <circle cx="12" cy="11" r="4" />
+                </svg>
+              </div>
+              <h4 class="mb-2">Atención Personalizada</h4>
+              <p>
+                Nos tomamos el tiempo para conocerte y adaptar cada tratamiento
+                a tus necesidades específicas.
+              </p>
+            </div>
+          </div>
+
+          <!-- tarjeta 2 -->
+          <div class="bg-fondo-principal shadow-lg rounded-lg relative">
+            <div class="absolute inset-0 grid grid-cols-3 grid-rows-3">
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-primario/20"></div>
+              </div>
+              <div class="flex items-center justify-center"></div>
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-primario/20"></div>
+              </div>
+              <div class="flex items-center justify-center"></div>
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-primario/20"></div>
+              </div>
+              <div class="flex items-center justify-center"></div>
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-primario/20"></div>
+              </div>
+              <div class="flex items-center justify-center"></div>
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-primario/20"></div>
+              </div>
+            </div>
+            <div class="p-6 relative">
+              <div class="mb-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-box-icon lucide-box w-8 h-8 md:w-10 md:h-10 text-primario"
+                >
+                  <path
+                    d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"
+                  />
+                  <path d="m3.3 7 8.7 5 8.7-5" />
+                  <path d="M12 22V12" />
+                </svg>
+              </div>
+              <h4 class="mb-2">Tecnología de Última Generación</h4>
+              <p>
+                Contamos con equipos digitales avanzados que mejoran la
+                experiencia y los resultados clínicos.
+              </p>
+            </div>
+          </div>
+
+          <!-- tarjeta 3 -->
+          <div
+            class="bg-fondo-principal shadow-lg rounded-lg relative md:col-span-2 md:w-2/3 md:mx-auto"
+          >
+            <div class="absolute inset-0 grid grid-cols-3 grid-rows-3">
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-primario/20"></div>
+              </div>
+              <div class="flex items-center justify-center"></div>
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-primario/20"></div>
+              </div>
+              <div class="flex items-center justify-center"></div>
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-primario/20"></div>
+              </div>
+              <div class="flex items-center justify-center"></div>
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-primario/20"></div>
+              </div>
+              <div class="flex items-center justify-center"></div>
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-primario/20"></div>
+              </div>
+            </div>
+            <div class="p-6 relative">
+              <div class="mb-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-shield-check-icon lucide-shield-check w-8 h-8 md:w-10 md:h-10 text-primario"
+                >
+                  <path
+                    d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                  />
+                  <path d="m9 12 2 2 4-4" />
+                </svg>
+              </div>
+              <h4 class="mb-2">Comodidad y Confianza</h4>
+              <p>
+                Creamos un espacio acogedor para que te sientas tranquilo antes,
+                durante y después de tu consulta.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--==================== ESPECIALIDADES ====================-->
+    <section
+      class="w-full bg-gradient-to-b from-fondo-alternativo to-fondo-principal"
+    >
+      <div class="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+          <small
+            class="encabezado inline-block text-estatus-proxima-texto bg-estatus-proxima-bg font-medium mb-4"
+          >
+            Nuestras Especialidades
+          </small>
+          <h2 class="tracking-tighter max-w-2xl mx-auto">
+            Diferentes tipos especialidades dentales para tu salud bucal
+          </h2>
+        </div>
+        <div
+          class="grid gap-6 mb-12 md:grid-cols-[repeat(2,1fr)] xl:grid-cols-[repeat(3,1fr)]"
+        >
+          <!-- especialidad 1 -->
+          <a
+            href="especialistas.html"
+            class="bg-fondo-principal shadow-lg rounded-lg relative hover:shadow-xl transition-shadow duration-300"
+          >
+            <div class="absolute inset-0 grid grid-cols-3 grid-rows-3">
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-primario/20"></div>
+              </div>
+              <div class="flex items-center justify-center"></div>
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-primario/20"></div>
+              </div>
+              <div class="flex items-center justify-center"></div>
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-primario/20"></div>
+              </div>
+              <div class="flex items-center justify-center"></div>
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-primario/20"></div>
+              </div>
+              <div class="flex items-center justify-center"></div>
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-primario/20"></div>
+              </div>
+            </div>
+            <div class="p-6 relative">
+              <div class="mb-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-heart-handshake-icon lucide-heart-handshake w-8 h-8 md:w-10 md:h-10 text-primario"
+                >
+                  <path
+                    d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"
+                  />
+                  <path
+                    d="M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08c.82.82 2.13.85 3 .07l2.07-1.9a2.82 2.82 0 0 1 3.79 0l2.96 2.66"
+                  />
+                  <path d="m18 15-2-2" />
+                  <path d="m15 18-2-2" />
+                </svg>
+              </div>
+              <h4 class="mb-2">Odontología General</h4>
+              <p>
+                Servicios básicos de limpieza dental, empastes y tratamientos
+                preventivos para mantener su salud bucal.
+              </p>
+            </div>
+          </a>
+
+          <!-- especialidad 2 -->
+          <a
+            href="especialistas.html"
+            class="bg-fondo-principal shadow-lg rounded-lg relative hover:shadow-xl transition-shadow duration-300"
+          >
+            <div class="absolute inset-0 grid grid-cols-3 grid-rows-3">
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-primario/20"></div>
+              </div>
+              <div class="flex items-center justify-center"></div>
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-primario/20"></div>
+              </div>
+              <div class="flex items-center justify-center"></div>
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-primario/20"></div>
+              </div>
+              <div class="flex items-center justify-center"></div>
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-primario/20"></div>
+              </div>
+              <div class="flex items-center justify-center"></div>
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-primario/20"></div>
+              </div>
+            </div>
+            <div class="p-6 relative">
+              <div class="mb-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-heart-plus-icon lucide-heart-plus w-8 h-8 md:w-10 md:h-10 text-primario"
+                >
+                  <path
+                    d="M13.5 19.5 12 21l-7-7c-1.5-1.45-3-3.2-3-5.5A5.5 5.5 0 0 1 7.5 3c1.76 0 3 .5 4.5 2 1.5-1.5 2.74-2 4.5-2a5.5 5.5 0 0 1 5.402 6.5"
+                  />
+                  <path d="M15 15h6" />
+                  <path d="M18 12v6" />
+                </svg>
+              </div>
+              <h4 class="mb-2">Ortodoncia</h4>
+              <p class="text-textos text-base lg:text-lg leading-relaxed">
+                Corrección de la alineación dental y problemas de mordida para
+                una sonrisa perfecta.
+              </p>
+            </div>
+          </a>
+
+          <!-- especialidad 3 -->
+          <a
+            href="especialistas.html
+            "
+            class="bg-fondo-principal shadow-lg rounded-lg relative hover:shadow-xl transition-shadow duration-300"
+          >
+            <div class="absolute inset-0 grid grid-cols-3 grid-rows-3">
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-primario/20"></div>
+              </div>
+              <div class="flex items-center justify-center"></div>
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-primario/20"></div>
+              </div>
+              <div class="flex items-center justify-center"></div>
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-primario/20"></div>
+              </div>
+              <div class="flex items-center justify-center"></div>
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-primario/20"></div>
+              </div>
+              <div class="flex items-center justify-center"></div>
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-primario/20"></div>
+              </div>
+            </div>
+            <div class="p-6 relative">
+              <div class="mb-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-id-card-lanyard-icon lucide-id-card-lanyard w-8 h-8 md:w-10 md:h-10 text-primario"
+                >
+                  <path d="M13.5 8h-3" />
+                  <path
+                    d="m15 2-1 2h3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h3"
+                  />
+                  <path d="M16.899 22A5 5 0 0 0 7.1 22" />
+                  <path d="m9 2 3 6" />
+                  <circle cx="12" cy="15" r="3" />
+                </svg>
+              </div>
+              <h4 class="mb-2">Endodoncia</h4>
+              <p>
+                Tratamiento especializado de conductos radiculares para salvar
+                dientes dañados.
+              </p>
+            </div>
+          </a>
+
+          <!-- especialidad 4 -->
+          <a
+            href="especialistas.html"
+            class="bg-fondo-principal shadow-lg rounded-lg relative hover:shadow-xl transition-shadow duration-300"
+          >
+            <div class="absolute inset-0 grid grid-cols-3 grid-rows-3">
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-primario/20"></div>
+              </div>
+              <div class="flex items-center justify-center"></div>
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-primario/20"></div>
+              </div>
+              <div class="flex items-center justify-center"></div>
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-primario/20"></div>
+              </div>
+              <div class="flex items-center justify-center"></div>
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-primario/20"></div>
+              </div>
+              <div class="flex items-center justify-center"></div>
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-primario/20"></div>
+              </div>
+            </div>
+            <div class="p-6 relative">
+              <div class="mb-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-id-card-lanyard-icon lucide-id-card-lanyard w-8 h-8 md:w-10 md:h-10 text-primario"
+                >
+                  <path d="M13.5 8h-3" />
+                  <path
+                    d="m15 2-1 2h3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h3"
+                  />
+                  <path d="M16.899 22A5 5 0 0 0 7.1 22" />
+                  <path d="m9 2 3 6" />
+                  <circle cx="12" cy="15" r="3" />
+                </svg>
+              </div>
+              <h4 class="mb-2">Endodoncia</h4>
+              <p>
+                Tratamiento especializado de conductos radiculares para salvar
+                dientes dañados.
+              </p>
+            </div>
+          </a>
+
+          <!-- especialidad 5 -->
+          <a
+            href="especialistas.html"
+            class="bg-fondo-principal shadow-lg rounded-lg relative hover:shadow-xl transition-shadow duration-300"
+          >
+            <div class="absolute inset-0 grid grid-cols-3 grid-rows-3">
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-primario/20"></div>
+              </div>
+              <div class="flex items-center justify-center"></div>
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-primario/20"></div>
+              </div>
+              <div class="flex items-center justify-center"></div>
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-primario/20"></div>
+              </div>
+              <div class="flex items-center justify-center"></div>
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-primario/20"></div>
+              </div>
+              <div class="flex items-center justify-center"></div>
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-primario/20"></div>
+              </div>
+            </div>
+            <div class="p-6 relative">
+              <div class="mb-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-heart-plus-icon lucide-heart-plus w-8 h-8 md:w-10 md:h-10 text-primario"
+                >
+                  <path
+                    d="M13.5 19.5 12 21l-7-7c-1.5-1.45-3-3.2-3-5.5A5.5 5.5 0 0 1 7.5 3c1.76 0 3 .5 4.5 2 1.5-1.5 2.74-2 4.5-2a5.5 5.5 0 0 1 5.402 6.5"
+                  />
+                  <path d="M15 15h6" />
+                  <path d="M18 12v6" />
+                </svg>
+              </div>
+              <h4 class="mb-2">Ortodoncia</h4>
+              <p class="text-textos text-base lg:text-lg leading-relaxed">
+                Corrección de la alineación dental y problemas de mordida para
+                una sonrisa perfecta.
+              </p>
+            </div>
+          </a>
+
+          <!-- especialidad 6 -->
+          <a
+            href="especialistas.html"
+            class="bg-fondo-principal shadow-lg rounded-lg relative hover:shadow-xl transition-shadow duration-300"
+          >
+            <div class="absolute inset-0 grid grid-cols-3 grid-rows-3">
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-primario/20"></div>
+              </div>
+              <div class="flex items-center justify-center"></div>
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-primario/20"></div>
+              </div>
+              <div class="flex items-center justify-center"></div>
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-primario/20"></div>
+              </div>
+              <div class="flex items-center justify-center"></div>
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-primario/20"></div>
+              </div>
+              <div class="flex items-center justify-center"></div>
+              <div class="flex items-center justify-center">
+                <div class="w-1.5 h-1.5 rounded-full bg-primario/20"></div>
+              </div>
+            </div>
+            <div class="p-6 relative">
+              <div class="mb-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-heart-handshake-icon lucide-heart-handshake w-8 h-8 md:w-10 md:h-10 text-primario"
+                >
+                  <path
+                    d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"
+                  />
+                  <path
+                    d="M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08c.82.82 2.13.85 3 .07l2.07-1.9a2.82 2.82 0 0 1 3.79 0l2.96 2.66"
+                  />
+                  <path d="m18 15-2-2" />
+                  <path d="m15 18-2-2" />
+                </svg>
+              </div>
+              <h4 class="mb-2">Odontología General</h4>
+              <p>
+                Servicios básicos de limpieza dental, empastes y tratamientos
+                preventivos para mantener su salud bucal.
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!--==================== BLOG ====================-->
+    <section
+      class="w-full py-16 md:py-32 lg:py-48 bg-gradient-to-b from-fondo-principal to-fondo-alternativo"
+    >
+      <div class="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+          <small
+            class="encabezado inline-block mb-4 text-estatus-proxima-texto bg-estatus-proxima-bg font-medium"
+          >
+            Nuestro Blog
+          </small>
+          <h2 class="tracking-tighter max-w-2xl mx-auto">
+            Lea nuestros artículos y<br />encuentre respuestas a sus preguntas
+          </h2>
+        </div>
+
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <article class="group cursor-pointer">
+            <div class="relative overflow-hidden rounded-lg mb-4">
+              <img
+                src="src/img/blog1.jpeg"
+                alt="blog1"
+                class="w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <h4 class="mb-2 group-hover:text-primario transition-colors">
+              Fusce id euismod dolor, id lacinia enim: In at faucibus.
+            </h4>
+            <small class="flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-calendar-icon lucide-calendar w-4 h-4"
+              >
+                <path d="M8 2v4" />
+                <path d="M16 2v4" />
+                <rect width="18" height="18" x="3" y="4" rx="2" />
+                <path d="M3 10h18" />
+              </svg>
+              Sep 4, 2024
+            </small>
+          </article>
+
+          <article class="group cursor-pointer">
+            <div class="relative overflow-hidden rounded-lg mb-4">
+              <img
+                src="src/img/blog1.jpeg"
+                alt="blog1"
+                class="w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <h4 class="mb-2 group-hover:text-primario transition-colors">
+              Fusce id euismod dolor, id lacinia enim: In at faucibus.
+            </h4>
+            <small class="flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-calendar-icon lucide-calendar w-4 h-4"
+              >
+                <path d="M8 2v4" />
+                <path d="M16 2v4" />
+                <rect width="18" height="18" x="3" y="4" rx="2" />
+                <path d="M3 10h18" />
+              </svg>
+              Sep 4, 2024
+            </small>
+          </article>
+
+          <article class="group cursor-pointer">
+            <div class="relative overflow-hidden rounded-lg mb-4">
+              <img
+                src="src/img/blog1.jpeg"
+                alt="blog1"
+                class="w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <h4 class="mb-2 group-hover:text-primario transition-colors">
+              Fusce id euismod dolor, id lacinia enim: In at faucibus.
+            </h4>
+            <small class="flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-calendar-icon lucide-calendar w-4 h-4"
+              >
+                <path d="M8 2v4" />
+                <path d="M16 2v4" />
+                <rect width="18" height="18" x="3" y="4" rx="2" />
+                <path d="M3 10h18" />
+              </svg>
+              Sep 4, 2024
+            </small>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <script src="src/js/main.js"></script>
+  </body>
+</html>
